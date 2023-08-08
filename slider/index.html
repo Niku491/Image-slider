@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="gallery-wrap">
+        <img src="image\next.png" id="next_btn">
+        <div class="contanier">
+            <div class="cards">
+                <div class="image">
+                    <img src="image\img2.jpg">
+                </div>
+                <div class="title"> Social Media</div>
+                <div class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, vero maiores odio odit
+                    voluptatibus
+                    nisi
+                    autem eligendi porro iste quam mollitia corrupti consequuntur voluptas rem, ab natus ut omnis. <br>
+                    <button>Read More...</button>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="image">
+                    <img src="image\img1.jpg" alt="">
+                </div>
+                <div class="title"> Social Media</div>
+                <div class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, vero maiores odio odit
+                    voluptatibus
+                    nisi
+                    autem eligendi porro iste quam mollitia corrupti consequuntur voluptas rem, ab natus ut omnis. <br>
+                    <button>Read More...</button>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="image">
+                    <img src="image\img5.jpg" alt="">
+                </div>
+                <div class="title"> Social Media</div>
+                <div class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, vero maiores odio odit
+                    voluptatibus
+                    nisi
+                    autem eligendi porro iste quam mollitia corrupti consequuntur voluptas rem, ab natus ut omnis. <br>
+                    <button>Read More...</button>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="image">
+                    <img src="image\img4.jpg" alt="">
+                </div>
+                <div class="title"> Social Media</div>
+                <div class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, vero maiores odio odit
+                    voluptatibus
+                    nisi
+                    autem eligendi porro iste quam mollitia corrupti consequuntur voluptas rem, ab natus ut omnis. <br>
+                    <button>Read More...</button>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="image">
+                    <img src="image\img9.jpg" alt="">
+                </div>
+                <div class="title"> Social Media</div>
+                <div class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, vero maiores odio odit
+                    voluptatibus
+                    nisi
+                    autem eligendi porro iste quam mollitia corrupti consequuntur voluptas rem, ab natus ut omnis. <br>
+                    <button>Read More...</button>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="image">
+                    <img src="image\img3.jpg" alt="">
+                </div>
+                <div class="title"> Social Media</div>
+                <div class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, vero maiores odio odit
+                    voluptatibus
+                    nisi
+                    autem eligendi porro iste quam mollitia corrupti consequuntur voluptas rem, ab natus ut omnis. <br>
+                    <button>Read More...</button>
+                </div>
+            </div>
+        </div>
+        <img src="image\back btn.png" id="back_btn">
+    </div>
+    <script>
+        let scrollcontainer = document.querySelector(".contanier");
+        let next_btn = document.getElementById("next_btn");
+        let back_btn = document.getElementById("back_btn");
+        scrollcontainer.addEventListener("wheel",(evt)=>{
+            evt.preventDefault();
+            scrollcontainer.scrollLeft += evt.deltaY;
+            scrollcontainer.style.scrollBehaviour = "auto";
+        });
+            next_btn.addEventListener("click",()=>{
+            scrollcontainer.style.scrollBehaviour = "smooth";
+            scrollcontainer.scrollLeft +=900;});
+            back_btn.addEventListener("click",()=>{
+            scrollcontainer.style.scrollBehaviour = "smooth";
+            scrollcontainer.scrollLeft -=900;
+        });
+    </script>
+</body>
+
+</html>
